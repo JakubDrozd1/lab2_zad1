@@ -199,20 +199,15 @@ namespace lab2_zad1
             double suma = 0;
             double suma1 = 0;
             double suma2 = 0;
-            double suma3 = 0;
-            double suma4 = 0;
             double[,] tab = new double[,] { { 11, 12, 13 }, { 1, 2, 3 }, { 6, 7, 8 }, { 9, 4, 5 }, { 7, 4, 1 } };
             for (int i = 0; i < tab.GetLength(0); i++)
             {
-                lbxPudlo.Items.Add($@"{tab[i, 0]}   {tab[i, 1]} {tab[i, 2]} [{tab[i, 0]+tab[i, 1]+tab[i, 2]}]");
+                lbxPudlo.Items.Add($@"{tab[i, 0]} {tab[i, 1]} {tab[i, 2]} [{tab[i, 0]+tab[i, 1]+tab[i, 2]}]");
+                suma += tab[i, 0];
+                suma1 += tab[i, 1];
+                suma2 += tab[i, 2];
             }
-            for (int j = 0; j < tab.GetLength(1); j++)
-            {
-                suma += tab[j, 0];
-                suma1 += tab[j, 1];
-                suma2 += tab[j, 2];
-            }
-            lbxPudlo.Items.Add($@"[{suma}] [{suma1}] [{suma2}] [{suma3}] [{suma4}]");
+            lbxPudlo.Items.Add($@"[{suma}] [{suma1}] [{suma2}]");
         }
     }
 }
