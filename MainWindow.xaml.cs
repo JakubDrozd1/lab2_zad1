@@ -209,5 +209,39 @@ namespace lab2_zad1
             }
             lbxPudlo.Items.Add($@"[{suma}] [{suma1}] [{suma2}]");
         }
+        
+        private void btnJagged_Click(object sender, RoutedEventArgs e)
+        {
+            lbxTablica.Items.Clear();
+            int[][] tab1 = new int[3][];
+            tab1[0] = new int[6];
+            tab1[1] = new int[5];
+            tab1[2] = new int[3];
+            int[] tabHelp = new int[] { 2, 3, 4, 5, 6, 8 };
+
+            for (int i = 0; i < 3; i++)
+            {
+                for (int j = 0; j < tab1[i].GetLength(0); j++)
+                {
+                tab1[i][j] = tabHelp[j];
+                }
+                }
+                for (int i = 0; i < 3; i++)
+                {
+                switch (i)
+                {
+                case 0:
+                lbxTablica.Items.Add(tab1[i][0] + "\t" + tab1[i][1] + "\t" + tab1[i][2] + "\t" + tab1[i][3] + "\t" + tab1[i][4] + "\t" + tab1[i][5] + "\t[" + (tab1[i][0] + tab1[i][1] + tab1[i][2] + tab1[i][3] + tab1[i][4] + tab1[i][5]) + "]");
+                break;
+                case 1:
+                lbxTablica.Items.Add(tab1[i][0] + "\t" + tab1[i][1] + "\t" + tab1[i][2] + "\t" + tab1[i][3] + "\t" + tab1[i][4] + "\t[" + (tab1[i][0] + tab1[i][1] + tab1[i][2] + tab1[i][3] + tab1[i][4]) + "]");
+                break;
+                case 2:
+                lbxTablica.Items.Add(tab1[i][0] + "\t" + tab1[i][1] + "\t" + tab1[i][2] + "\t[" + (tab1[i][0] + tab1[i][1] + tab1[i][2]) + "]");
+                    break;
+                }
+}
+
+}
     }
 }
